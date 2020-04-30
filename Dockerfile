@@ -3,6 +3,8 @@
 FROM ubuntu:16.04
 RUN echo "nameserver 8.8.8.8" | tee /etc/resolv.conf > /dev/null
 
+ADD . /
+
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 RUN echo "deb http://cloud.r-project.org/bin/linux/ubuntu xenial-cran35/" | tee -a /etc/apt/sources.list
 
